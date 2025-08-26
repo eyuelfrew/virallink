@@ -65,23 +65,20 @@ const Header = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-center"
           >
-            <Link href="/" className="flex items-center space-x-3 group">
+            <Link href="/" className="flex items-center group">
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
                 className="relative"
               >
-                <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="flex items-center justify-center p-2">
+                  <img 
+                    src="/image.webp" 
+                    alt="Viralink Logo" 
+                    className="w-24 h-24 object-contain"
+                  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </motion.div>
-              <div>
-                <span className="text-2xl font-heading font-bold gradient-text">
-                  Viralink
-                </span>
-                <div className="text-xs text-gray-500 font-medium">Digital Excellence</div>
-              </div>
             </Link>
           </motion.div>
 
@@ -152,7 +149,7 @@ const Header = () => {
             >
               <Link
                 href="/contact"
-                className="btn-hover bg-gradient-to-r from-primary-600 to-accent-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="btn-hover bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </Link>
@@ -229,7 +226,7 @@ const Header = () => {
                 >
                   <Link
                     href="/contact"
-                    className="block w-full text-center bg-gradient-to-r from-primary-600 to-accent-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg"
+                    className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get Started

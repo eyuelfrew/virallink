@@ -11,54 +11,34 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Fitsum Abera',
       position: 'CEO',
-      company: 'TechStart Inc.',
+      company: 'Fitsum Printing and Advertising',
       image: '/api/placeholder/80/80',
       rating: 5,
-      text: 'Viralink transformed our digital presence completely. Their strategic approach to SEO and content marketing increased our organic traffic by 300% in just 6 months. The team is incredibly knowledgeable and responsive.',
-      results: '+300% Traffic Growth',
+      text: 'Partnering with Virallink Digital Marketing was one of the best decisions we\'ve made. We\'ve been in the printing and advertising business for years, but we struggled to translate our quality work into a strong online presence. Virallink understood our unique challenges and crafted a strategy that truly showcased our products. Our engagement has skyrocketed, and we\'re getting more qualified leads than ever before. Their team is professional, creative, and genuinely committed to our success.',
+      results: 'Transformed Online Presence',
       color: 'from-primary-500 to-primary-600'
     },
     {
-      name: 'Michael Chen',
-      position: 'Marketing Director',
-      company: 'GrowthCorp',
+      name: 'Solomon Nigussie',
+      position: 'CEO',
+      company: 'Soul Medicare Solution',
       image: '/api/placeholder/80/80',
       rating: 5,
-      text: 'The ViraFlow automation platform revolutionized our lead nurturing process. We\'ve seen a 250% increase in qualified leads and our conversion rates have never been higher. Absolutely game-changing!',
-      results: '+250% Lead Quality',
+      text: 'As a Medicare solution company, our biggest goal is to build trust and provide clarity in a complex industry. The team at Virallink Digital Marketing helped us achieve just that. They created a content strategy that was not only informative but also compassionate and easy for our clients to understand. Their work has elevated our brand\'s reputation and helped us reach a wider audience of people looking for reliable Medicare advice. We\'re grateful for their expertise and dedication to our mission and delivering in such a short time.',
+      results: 'Enhanced Brand Trust',
       color: 'from-success-500 to-success-600'
     },
     {
-      name: 'Emily Rodriguez',
-      position: 'Founder',
-      company: 'EcoSolutions',
+      name: 'Addisalem Mekonnen',
+      position: 'CEO',
+      company: 'Admas Tour and Travel',
       image: '/api/placeholder/80/80',
       rating: 5,
-      text: 'Working with Viralink has been an incredible journey. Their social media strategies helped us build a community of over 100K engaged followers, and our brand awareness has skyrocketed.',
-      results: '+100K Followers',
+      text: 'We\'ve always been passionate about creating unforgettable travel experiences, and Virallink Digital Marketing helped us share that passion with our people and the world. They captured the essence of our tours and translated it into stunning social media content that inspired our followers to book their next adventure. Our bookings have seen a significant increase, and we\'ve been able to connect with travelers from all over. We highly recommend Virallink to any business looking to bring their story to life online.',
+      results: '+Significant Booking Increase',
       color: 'from-accent-500 to-accent-600'
-    },
-    {
-      name: 'David Thompson',
-      position: 'VP of Sales',
-      company: 'SalesForce Pro',
-      image: '/api/placeholder/80/80',
-      rating: 5,
-      text: 'ViraCRM streamlined our entire sales process. The integration capabilities and automation features saved us countless hours while improving our customer relationships significantly.',
-      results: '+180% Efficiency',
-      color: 'from-warning-500 to-warning-600'
-    },
-    {
-      name: 'Lisa Park',
-      position: 'CMO',
-      company: 'InnovateLab',
-      image: '/api/placeholder/80/80',
-      rating: 5,
-      text: 'The analytics and insights from ViraInsights helped us make data-driven decisions that increased our ROI by 400%. The custom dashboards are incredibly intuitive and powerful.',
-      results: '+400% ROI',
-      color: 'from-indigo-500 to-indigo-600'
     }
   ];
 
@@ -267,9 +247,9 @@ const Testimonials = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-500 mb-8">Trusted by industry leaders worldwide</p>
+          <p className="text-gray-500 mb-8">Trusted by industry leaders</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {['TechStart', 'GrowthCorp', 'EcoSolutions', 'SalesForce Pro', 'InnovateLab'].map((company, index) => (
+            {['Fitsum Printing and Advertising', 'Soul Medicare Solution', 'Admas Tour and Travel'].map((company, index) => (
               <motion.div
                 key={company}
                 initial={{ opacity: 0, scale: 0.8 }}

@@ -32,8 +32,8 @@ const Footer = () => {
     {
       title: 'Products',
       links: [
-        { name: 'ViraFlow - Automation', href: '/products/viraflow' },
-        { name: 'ViraInsights - Analytics', href: '/products/virainsights' },
+        { name: 'Web Development', href: '/products/web-development' },
+        { name: 'Custom Designed QR Stands', href: '/products/qr-stands' },
         { name: 'ViraCRM - Customer Management', href: '/products/viracrm' },
         { name: 'Custom Solutions', href: '/products/custom' },
       ]
@@ -116,37 +116,42 @@ const Footer = () => {
                     transition={{ duration: 0.6 }}
                     className="relative"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
-                      <Zap className="w-7 h-7 text-white" />
+                    <div className="flex items-center justify-center p-2">
+                      <img 
+                        src="/image.webp" 
+                        alt="Viralink Logo" 
+                        className="w-24 h-24 object-contain"
+                      />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
                   </motion.div>
                   <div>
-                    <span className="text-3xl font-heading font-bold gradient-text">
+                    <span className="text-3xl font-heading font-bold text-white">
                       Viralink
                     </span>
-                    <div className="text-sm text-gray-400 font-medium">Digital Excellence</div>
                   </div>
                 </Link>
-
+                
                 <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                  Transforming businesses through innovative digital marketing strategies and 
-                  cutting-edge software solutions. Your success is our mission.
+                  Connecting Brands To Success
                 </p>
 
                 {/* Contact Info */}
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-300">
                     <Mail className="w-5 h-5 mr-3 text-primary-400" />
-                    <span>hello@viralink.com</span>
+                    <span>info@virallinkdigital.com</span>
                   </div>
                   <div className="flex items-center text-gray-300">
                     <Phone className="w-5 h-5 mr-3 text-primary-400" />
-                    <span>+1 (555) 123-4567</span>
+                    <span>+251963343720</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <Phone className="w-5 h-5 mr-3 text-primary-400" />
+                    <span>+251935334875</span>
                   </div>
                   <div className="flex items-center text-gray-300">
                     <MapPin className="w-5 h-5 mr-3 text-primary-400" />
-                    <span>123 Digital Street, Tech City, TC 12345</span>
+                    <span>Mexico, Taos Tower 9th Floor (In front of Genet Hotel)</span>
                   </div>
                 </div>
               </motion.div>

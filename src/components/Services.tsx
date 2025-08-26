@@ -150,7 +150,7 @@ const Services = () => {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
             Comprehensive Digital{' '}
-            <span className="gradient-text">Marketing Services</span>
+            <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">Marketing Services</span>
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -296,7 +296,7 @@ const Services = () => {
                 transition={{ duration: 0.6, delay: 1.2 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-hover bg-white text-primary-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="btn-hover bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Start Your Project Today
               </motion.button>
