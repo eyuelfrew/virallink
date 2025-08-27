@@ -44,7 +44,6 @@ export default function BlogPage() {
       category: 'SEO',
       tags: ['SEO', 'Google', 'Algorithm', 'Optimization'],
       image: '/api/placeholder/600/400',
-      views: 2847,
       comments: 23,
       featured: true,
       color: 'from-blue-500 to-blue-600'
@@ -61,7 +60,6 @@ export default function BlogPage() {
       category: 'Social Media',
       tags: ['Social Media', 'Trends', 'Engagement', 'Content'],
       image: '/api/placeholder/600/400',
-      views: 1923,
       comments: 18,
       featured: false,
       color: 'from-purple-500 to-purple-600'
@@ -78,7 +76,6 @@ export default function BlogPage() {
       category: 'Content Marketing',
       tags: ['Content Marketing', 'ROI', 'Analytics', 'Metrics'],
       image: '/api/placeholder/600/400',
-      views: 1654,
       comments: 15,
       featured: false,
       color: 'from-green-500 to-green-600'
@@ -95,7 +92,6 @@ export default function BlogPage() {
       category: 'Marketing Automation',
       tags: ['Automation', 'Email Marketing', 'Lead Nurturing', 'Workflows'],
       image: '/api/placeholder/600/400',
-      views: 2156,
       comments: 31,
       featured: true,
       color: 'from-orange-500 to-orange-600'
@@ -112,7 +108,6 @@ export default function BlogPage() {
       category: 'PPC',
       tags: ['PPC', 'Google Ads', 'ROI', 'Optimization'],
       image: '/api/placeholder/600/400',
-      views: 1789,
       comments: 22,
       featured: false,
       color: 'from-red-500 to-red-600'
@@ -129,7 +124,6 @@ export default function BlogPage() {
       category: 'Email Marketing',
       tags: ['Email Marketing', 'Open Rates', 'Engagement', 'Automation'],
       image: '/api/placeholder/600/400',
-      views: 2341,
       comments: 28,
       featured: false,
       color: 'from-indigo-500 to-indigo-600'
