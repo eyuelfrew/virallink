@@ -2,13 +2,13 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
-  MessageSquare, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Send,
+  MessageSquare,
   Calendar,
   Zap,
   CheckCircle,
@@ -46,10 +46,10 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
@@ -119,7 +119,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
         {/* Background Elements */}
@@ -175,7 +175,7 @@ export default function ContactPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              Get in touch with our team of digital marketing experts and software specialists. 
+              Get in touch with our team of digital marketing experts and software specialists.
               We're here to help you achieve extraordinary growth and success.
             </p>
 
@@ -213,8 +213,8 @@ export default function ContactPage() {
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
                     animate={isInView ? { scale: 1, rotate: 0 } : {}}
-                    transition={{ 
-                      duration: 0.6, 
+                    transition={{
+                      duration: 0.6,
                       delay: info.delay + 0.2,
                       type: "spring",
                       stiffness: 200
