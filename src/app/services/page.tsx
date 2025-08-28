@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { motion } from 'framer-motion';
 import { Search, Share2, PenTool, BarChart3, Target, Smartphone, ArrowRight, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -81,7 +80,7 @@ export default function ServicesPage() {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <div key={service.title} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-primary-100 rounded-2xl mb-6">
                     <service.icon className="w-8 h-8 text-primary-600" />

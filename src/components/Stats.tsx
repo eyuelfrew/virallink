@@ -171,14 +171,14 @@ const Stats = () => {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our track record speaks for itself. Here's how we've helped businesses 
+            Our track record speaks for itself. Here&#39;s how we&#39;ve helped businesses 
             like yours achieve extraordinary digital growth and success.
           </p>
         </motion.div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 50, scale: 0.9 }}

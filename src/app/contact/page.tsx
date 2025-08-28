@@ -10,7 +10,6 @@ import {
   Send,
   MessageSquare,
   Calendar,
-  Zap,
   CheckCircle,
   ArrowRight,
   Globe,
@@ -164,7 +163,7 @@ export default function ContactPage() {
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-sm font-medium mb-6"
             >
               <MessageSquare className="w-4 h-4 mr-2" />
-              Let's Start a Conversation
+              Let&#39;s Start a Conversation
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-gray-900 leading-tight mb-6">
@@ -176,7 +175,7 @@ export default function ContactPage() {
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
               Get in touch with our team of digital marketing experts and software specialists.
-              We're here to help you achieve extraordinary growth and success.
+              We&#39;re here to help you achieve extraordinary growth and success.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500">
@@ -201,7 +200,7 @@ export default function ContactPage() {
       <section ref={ref} className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {contactInfo.map((info, index) => (
+            {contactInfo.map((info) => (
               <motion.div
                 key={info.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -255,7 +254,7 @@ export default function ContactPage() {
                   Get Your Free Consultation
                 </h2>
                 <p className="text-gray-600 mb-8">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                  Fill out the form below and we&#39;ll get back to you within 24 hours.
                 </p>
 
                 {!isSubmitted ? (
@@ -399,7 +398,8 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                      style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}
                     >
                       {isSubmitting ? (
                         <>
@@ -437,7 +437,7 @@ export default function ContactPage() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Thank you for reaching out. We'll get back to you within 24 hours.
+                      Thank you for reaching out. We&#39;ll get back to you within 24 hours.
                     </p>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
@@ -523,27 +523,6 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Schedule Call CTA */}
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white">
-                <div className="flex items-center mb-4">
-                  <Calendar className="w-8 h-8 mr-3" />
-                  <h3 className="text-2xl font-heading font-bold">
-                    Schedule a Call
-                  </h3>
-                </div>
-                <p className="mb-6 opacity-90">
-                  Prefer to talk? Book a free 30-minute consultation call with our experts.
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
-                >
-                  Book Free Call
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </motion.button>
               </div>
             </motion.div>
           </div>

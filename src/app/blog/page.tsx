@@ -6,21 +6,15 @@ import {
   Search, 
   Calendar, 
   Clock, 
-  User, 
   ArrowRight, 
   Tag,
   TrendingUp,
-  Eye,
-  MessageCircle,
-  Share2,
   BookOpen,
   Filter,
-  ChevronDown,
   Star
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
 // SEO will be handled in layout.tsx or we can create a separate metadata file
 
 export default function BlogPage() {

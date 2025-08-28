@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Play, Sparkles, Zap, TrendingUp, Users, Award, Target } from 'lucide-react';
+import {  Play, Sparkles, Zap, TrendingUp, Users, Award, Target } from 'lucide-react';
 import { useRef } from 'react';
 
 const Hero = () => {

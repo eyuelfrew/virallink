@@ -10,7 +10,6 @@ import {
   Target,
   Smartphone,
   Globe,
-  TrendingUp,
   ArrowRight,
   Zap
 } from 'lucide-react';
@@ -166,7 +165,7 @@ const Services = () => {
           animate={isInView ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               variants={itemVariants}
@@ -287,7 +286,7 @@ const Services = () => {
                 transition={{ duration: 0.6, delay: 1 }}
                 className="text-lg opacity-90 mb-8 max-w-2xl mx-auto"
               >
-                Let's discuss how our comprehensive digital marketing services can transform
+                Let&#39;s discuss how our comprehensive digital marketing services can transform
                 your business and drive unprecedented growth.
               </motion.p>
               <motion.button

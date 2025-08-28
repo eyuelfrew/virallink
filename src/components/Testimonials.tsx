@@ -104,7 +104,7 @@ const Testimonials = () => {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what industry leaders and successful 
+            Don&#39;t just take our word for it. Here&#39;s what industry leaders and successful 
             businesses have to say about their experience working with Viralink.
           </p>
         </motion.div>
@@ -165,7 +165,7 @@ const Testimonials = () => {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 font-medium"
                       >
-                        "{testimonial.text}"
+                        &#34;{testimonial.text}&#34;
                       </motion.blockquote>
 
                       {/* Results Badge */}

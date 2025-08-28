@@ -11,18 +11,15 @@ import {
   Heart,
   Globe,
   TrendingUp,
-  Star,
-  CheckCircle,
-  ArrowRight,
   Play,
-  Calendar,
   MapPin,
   Coffee,
   Lightbulb,
   Rocket,
   Shield,
   Sparkles,
-  Eye
+  Eye,
+  ArrowRight
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -62,7 +59,7 @@ export default function AboutPage() {
       achievements: '500+ successful projects',
       location: 'Addis Ababa, Ethiopia',
       color: 'from-blue-500 to-blue-600',
-      quote: 'Innovation is not just about technology, it\'s about creating meaningful impact.'
+      quote: 'Innovation is not just about technology, it&apos;s about creating meaningful impact.'
     },
     {
       name: 'Hanan Mohammed',
@@ -257,7 +254,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              Born in the heart of Ethiopia, we're a passionate team of innovators, creators, and strategists
+              Born in the heart of Ethiopia, we&#39;re a passionate team of innovators, creators, and strategists
               dedicated to empowering businesses worldwide through cutting-edge digital marketing and technology.
             </p>
 
@@ -486,7 +483,7 @@ export default function AboutPage() {
 
                 {/* Quote */}
                 <blockquote className="text-center text-sm text-gray-600 italic border-l-4 border-blue-200 pl-4 bg-blue-50 p-4 rounded-lg">
-                  "{member.quote}"
+                  &ldquo;{member.quote}&rdquo;
                 </blockquote>
 
                 {/* Social Links Placeholder */}
@@ -520,7 +517,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               From a small startup in Addis Ababa to a global digital marketing powerhouse,
-              here's how we've grown and evolved over the years.
+              here&#39;s how we&#39;ve grown and evolved over the years.
             </p>
           </motion.div>
 
@@ -578,7 +575,7 @@ export default function AboutPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We believe that great work comes from great culture. Here's what makes
+              We believe that great work comes from great culture. Here&#39;s what makes
               Viralink an amazing place to work and grow.
             </p>
           </motion.div>
@@ -662,8 +659,8 @@ export default function AboutPage() {
               Ready to Join Our Journey?
             </h2>
             <p className="text-lg opacity-90 mb-8 max-w-3xl mx-auto">
-              Whether you're looking for a career opportunity or want to partner with us,
-              we'd love to hear from you and explore how we can create something amazing together.
+              Whether you&#39;re looking for a career opportunity or want to partner with us,
+              we&#39;d love to hear from you and explore how we can create something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
