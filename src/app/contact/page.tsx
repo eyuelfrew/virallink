@@ -57,7 +57,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@viralink.com',
+      details: 'info@virallinkdigital.com',
       description: 'Send us an email anytime',
       color: 'from-blue-500 to-blue-600',
       delay: 0.1
@@ -65,7 +65,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
+      details: '+251963343720',
       description: 'Mon-Fri from 8am to 6pm',
       color: 'from-green-500 to-green-600',
       delay: 0.2
@@ -73,8 +73,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: '123 Digital Street',
-      description: 'Tech City, TC 12345',
+      details: 'Taos Tower, 9th Floor',
+      description: 'Mexico, Addis Ababa, Ethiopia',
       color: 'from-purple-500 to-purple-600',
       delay: 0.3
     },
@@ -175,7 +175,7 @@ export default function ContactPage() {
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
               Get in touch with our team of digital marketing experts and software specialists.
-              We&#39;re here to help you achieve extraordinary growth and success.
+              We're located in Taos Tower, 9th Floor, Mexico, Addis Ababa, Ethiopia.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500">
@@ -471,21 +471,41 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
-              {/* Map Placeholder */}
+              {/* Google Maps Embed */}
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                 <h3 className="text-2xl font-heading font-bold text-gray-900 mb-6">
                   Visit Our Office
                 </h3>
-                <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl h-64 flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                    <p className="text-gray-700 font-semibold">Interactive Map</p>
-                    <p className="text-gray-600 text-sm">123 Digital Street, Tech City</p>
-                  </div>
+                <div className="rounded-2xl overflow-hidden mb-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15760.247!2d38.761111!3d9.031944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85ceb2c4c2c5%3A0x8b8b8b8b8b8b8b8b!2sTaos%20Tower!5e0!3m2!1sen!2set!4v1650000000000!5m2!1sen!2set"
+                    width="100%"
+                    height="350"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Viralink Office Location - Taos Tower, 9th Floor, Mexico, Addis Ababa"
+                  ></iframe>
                 </div>
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <span>📍 Easy parking available</span>
-                  <span>🚇 Metro accessible</span>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-sm text-gray-600">
+                    <span>📍 In front of Genet Hotel</span>
+                    <span>🚗 Parking available</span>
+                  </div>
+                  <div className="text-center">
+                    <a
+                      href="https://maps.app.goo.gl/SNJm7g3zPJhHAc4w8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
+                      style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}
+                    >
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Open in Google Maps
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
                 </div>
               </div>
 

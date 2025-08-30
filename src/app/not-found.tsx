@@ -10,7 +10,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      
+
       {/* 404 Section */}
       <section className="min-h-screen pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden flex items-center">
         {/* Animated Background */}
@@ -64,9 +64,9 @@ export default function NotFound() {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
                 Oops! Page Not Found
               </h1>
-              
+
               <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                The page you&apos;re looking for seems to have wandered off into the digital wilderness. 
+                The page you&apos;re looking for seems to have wandered off into the digital wilderness.
                 Don&apos;t worry, even the best explorers sometimes take a wrong turn!
               </p>
 
@@ -85,7 +85,7 @@ export default function NotFound() {
                     Back to Home
                   </Link>
                 </motion.div>
-                
+
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -112,7 +112,7 @@ export default function NotFound() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Looking for something specific?</h3>
                 <p className="text-gray-600 text-sm mb-4">Try searching our site or check out these popular pages:</p>
-                
+
                 <div className="flex flex-wrap gap-2 justify-center">
                   <Link href="/services" className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm hover:bg-blue-200 transition-colors duration-200">
                     Services
