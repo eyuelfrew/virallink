@@ -2,6 +2,8 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { emailjsConfig } from '@/lib/emailjs-config';
 import {
   Mail,
   Phone,
@@ -34,6 +36,7 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -45,12 +48,37 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError('');
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company || 'Not specified',
+        phone: formData.phone || 'Not provided',
+        service: formData.service,
+        budget: formData.budget || 'Not specified',
+        timeline: formData.timeline || 'Not specified',
+        message: formData.message,
+        to_email: 'info@virallinkdigital.com', // Your email
+      };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      // Send email using EmailJS
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        templateParams,
+        emailjsConfig.publicKey
+      );
+      
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitError('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -256,6 +284,12 @@ export default function ContactPage() {
                 <p className="text-gray-600 mb-8">
                   Fill out the form below and we&#39;ll get back to you within 24 hours.
                 </p>
+
+                {submitError && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+                    <p className="text-red-600 text-sm">{submitError}</p>
+                  </div>
+                )}
 
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
