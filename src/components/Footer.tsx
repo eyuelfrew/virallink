@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 import { 
@@ -116,10 +117,13 @@ const Footer = () => {
                     className="relative"
                   >
                     <div className="flex items-center justify-center p-2">
-                      <img 
+                      <Image 
                         src="/image.webp" 
                         alt="Viralink Logo" 
+                        width={96} 
+                        height={96} 
                         className="w-24 h-24 object-contain"
+                        priority
                       />
                     </div>
                   </motion.div>
@@ -250,7 +254,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="flex items-center space-x-4"
             >
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
                   href={social.href}

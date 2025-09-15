@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -72,10 +73,13 @@ const Header = () => {
                 className="relative"
               >
                 <div className="flex items-center justify-center p-2">
-                  <img 
+                  <Image 
                     src="/image.webp" 
                     alt="Viralink Logo" 
+                    width={96} 
+                    height={96} 
                     className="w-24 h-24 object-contain"
+                    priority
                   />
                 </div>
               </motion.div>

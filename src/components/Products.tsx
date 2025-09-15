@@ -137,7 +137,7 @@ const Products = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
+          {products.map((product) => (
             <motion.div
               key={product.name}
               initial={{ opacity: 0, y: 50, scale: 0.9 }}

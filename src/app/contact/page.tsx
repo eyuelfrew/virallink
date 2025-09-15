@@ -2,8 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { emailjsConfig } from '@/lib/emailjs-config';
+
 import {
   Mail,
   Phone,
@@ -11,7 +10,6 @@ import {
   Clock,
   Send,
   MessageSquare,
-  Calendar,
   CheckCircle,
   ArrowRight,
   Globe,
@@ -52,26 +50,6 @@ export default function ContactPage() {
 
     try {
       // Prepare template parameters
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        company: formData.company || 'Not specified',
-        phone: formData.phone || 'Not provided',
-        service: formData.service,
-        budget: formData.budget || 'Not specified',
-        timeline: formData.timeline || 'Not specified',
-        message: formData.message,
-        to_email: 'info@virallinkdigital.com', // Your email
-      };
-
-      // Send email using EmailJS
-      await emailjs.send(
-        emailjsConfig.serviceId,
-        emailjsConfig.templateId,
-        templateParams,
-        emailjsConfig.publicKey
-      );
-      
       setIsSubmitted(true);
     } catch (error) {
       console.error('Email sending failed:', error);
@@ -203,7 +181,7 @@ export default function ContactPage() {
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
               Get in touch with our team of digital marketing experts and software specialists.
-              We're located in Taos Tower, 9th Floor, Mexico, Addis Ababa, Ethiopia.
+              We&apos;re located in Taos Tower, 9th Floor, Mexico, Addis Ababa, Ethiopia.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500">
