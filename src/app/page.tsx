@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
-import Products from '@/components/Products';
+// import Products from '@/components/Products';
 import Stats from '@/components/Stats';
 import Testimonials from '@/components/Testimonials';
 import CTA from '@/components/CTA';
@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <Services />
-        <Products />
+        {/* <Products /> */}
         <Testimonials />
         <CTA />
       </main>

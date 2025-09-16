@@ -32,15 +32,15 @@ const Header = () => {
         { name: 'Content Marketing', href: '/services/content' },
       ]
     },
-    { 
-      name: 'Products', 
-      href: '/products',
-      dropdown: [
-        { name: 'Marketing Automation', href: '/products/automation' },
-        { name: 'Analytics Dashboard', href: '/products/analytics' },
-        { name: 'CRM Solutions', href: '/products/crm' },
-      ]
-    },
+    // { 
+    //   name: 'Products', 
+    //   href: '/products',
+    //   dropdown: [
+    //     { name: 'Marketing Automation', href: '/products/automation' },
+    //     { name: 'Analytics Dashboard', href: '/products/analytics' },
+    //     { name: 'CRM Solutions', href: '/products/crm' },
+    //   ]
+    // },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
