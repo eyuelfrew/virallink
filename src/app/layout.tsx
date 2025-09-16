@@ -23,14 +23,14 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Viralink - Digital Marketing & Software Solutions',
-    template: '%s | Viralink'
+    default: 'Viralink Digital - Digital Marketing & Software Solutions',
+    template: '%s | Viralink Digital'
   },
-  description: 'Transform your digital presence with Viralink\'s cutting-edge marketing strategies and innovative software solutions. We help businesses scale through data-driven marketing and powerful technology.',
-  keywords: 'digital marketing, software solutions, SEO, social media marketing, web development, SaaS, marketing automation, Viralink',
-  authors: [{ name: 'Viralink Team' }],
-  creator: 'Viralink',
-  publisher: 'Viralink',
+  description: 'Transform your digital presence with Viralink Digital\'s cutting-edge marketing strategies and innovative software solutions. We help businesses scale through data-driven marketing and powerful technology.',
+  keywords: 'digital marketing, software solutions, SEO, social media marketing, web development, SaaS, marketing automation, Viralink Digital',
+  authors: [{ name: 'Viralink Digital Team' }],
+  creator: 'Viralink Digital',
+  publisher: 'Viralink Digital',
   robots: {
     index: true,
     follow: true,
@@ -45,19 +45,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://viralink.com',
-    siteName: 'Viralink',
-    title: 'Viralink - Digital Marketing & Software Solutions',
+    url: 'https://viralinkdigital.com',
+    siteName: 'Viralink Digital',
+    title: 'Viralink Digital - Digital Marketing & Software Solutions',
     description: 'Transform your digital presence with cutting-edge marketing strategies and innovative software solutions.',
+    images: [
+      {
+        url: 'https://viralinkdigital.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Viralink Digital - Digital Marketing & Software Solutions',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Viralink - Digital Marketing & Software Solutions',
+    title: 'Viralink Digital - Digital Marketing & Software Solutions',
     description: 'Transform your digital presence with cutting-edge marketing strategies and innovative software solutions.',
-    creator: '@viralink',
+    creator: '@viralinkdigital',
+    images: ['https://viralinkdigital.com/twitter-image.png'],
   },
   alternates: {
-    canonical: 'https://viralink.com',
+    canonical: 'https://viralinkdigital.com',
   },
 };
 
