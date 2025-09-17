@@ -149,7 +149,7 @@ const Services = () => {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
             Comprehensive Digital{' '}
-            <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">Marketing Services</span>
+            <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Marketing Services</span>
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -278,7 +278,8 @@ const Services = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="text-2xl lg:text-4xl font-heading font-bold mb-4"
               >
-                Ready to Accelerate Your Growth?
+                Ready to Accelerate Your{' '}
+                <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Growth?</span>
               </motion.h3>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

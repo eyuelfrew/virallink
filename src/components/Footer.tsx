@@ -48,16 +48,7 @@ const Footer = () => {
         { name: 'Blog', href: '/blog' },
       ]
     },
-    {
-      title: 'Support',
-      links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Contact Support', href: '/support' },
-        { name: 'System Status', href: '/status' },
-      ]
-    }
+
   ];
 
   const socialLinks = [
@@ -162,7 +153,7 @@ const Footer = () => {
 
             {/* Links Sections */}
             <div className="lg:col-span-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {footerSections.map((section, sectionIndex) => (
                   <motion.div
                     key={section.title}
@@ -200,60 +191,19 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="py-8 border-t border-gray-800"
-        >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="font-heading font-bold text-xl mb-2">Stay Updated</h3>
-              <p className="text-gray-400">Get the latest insights and updates delivered to your inbox.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors duration-200 flex-1 lg:w-64"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-hover bg-gradient-to-r from-primary-600 to-accent-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Subscribe
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
+
 
         {/* Bottom Section */}
-        <div className="py-8 border-t border-gray-800">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            {/* Copyright */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex items-center text-gray-400 text-sm"
-            >
-              <span>© {currentYear} Viralink. Made with</span>
-              <Heart className="w-4 h-4 mx-1 text-red-500 fill-current" />
-              <span>for digital excellence.</span>
-            </motion.div>
-
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-4"
-            >
+        <div className="pt-8 border-t border-gray-800">
+          {/* Social Links Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-8"
+          >
+            <div className="flex items-center space-x-6">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
@@ -262,33 +212,52 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-primary-600 hover:to-accent-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
+                  className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-r hover:from-primary-600 hover:to-accent-600 rounded-xl flex items-center justify-center transition-all duration-300 group shadow-lg"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                  <social.icon className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </motion.a>
               ))}
-            </motion.div>
+            </div>
+          </motion.div>
 
-            {/* Legal Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-6 text-sm"
-            >
-              <Link href="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">
+          {/* Legal Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-6"
+          >
+            <div className="flex items-center space-x-8 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors duration-200 hover:underline">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">
+              <span className="text-gray-600">•</span>
+              <Link href="/terms" className="text-gray-400 hover:text-primary-400 transition-colors duration-200 hover:underline">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">
+              <span className="text-gray-600">•</span>
+              <Link href="/cookies" className="text-gray-400 hover:text-primary-400 transition-colors duration-200 hover:underline">
                 Cookie Policy
               </Link>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
+
+          {/* Copyright */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center pb-8"
+          >
+            <div className="flex items-center justify-center text-gray-400 text-sm">
+              <span>© {currentYear} Viralink. Made with</span>
+              <Heart className="w-4 h-4 mx-1 text-red-500 fill-current" />
+              <span>for digital excellence.</span>
+            </div>
+          </motion.div>
         </div>
       </div>
     </footer>

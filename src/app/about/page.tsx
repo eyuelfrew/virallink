@@ -667,6 +667,7 @@ export default function AboutPage() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+                onClick={() => router.push('/careers')}
               >
                 View Open Positions
                 <ArrowRight className="ml-2 w-5 h-5" />

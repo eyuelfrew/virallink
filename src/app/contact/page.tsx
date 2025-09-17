@@ -532,7 +532,7 @@ export default function ContactPage() {
                       <Users className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">500+ Happy Clients</p>
+                      <p className="font-semibold text-gray-900">15+ Happy Clients</p>
                       <p className="text-gray-600 text-sm">Trusted by businesses worldwide</p>
                     </div>
                   </div>

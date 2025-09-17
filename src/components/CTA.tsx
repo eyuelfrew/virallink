@@ -166,7 +166,7 @@ const CTA = () => {
                         <motion.button
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.95 }}
-                            className="group btn-hover bg-white text-primary-600 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center"
+                            className="group btn-hover bg-white text-black px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center"
                         >
                             Get Started Now
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -194,7 +194,7 @@ const CTA = () => {
                                     <div key={i} className="w-6 h-6 bg-white/20 rounded-full border border-white/30"></div>
                                 ))}
                             </div>
-                            <span>500+ Happy Clients</span>
+                            <span>15+ Happy Clients</span>
                         </div>
                         <div className="flex items-center">
                             <Star className="w-4 h-4 text-warning-400 mr-1" />

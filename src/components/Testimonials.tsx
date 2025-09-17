@@ -51,7 +51,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
+    <section ref={ref} className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -64,7 +64,7 @@ const Testimonials = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-r from-primary-100 to-accent-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+          className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         />
         <motion.div
           animate={{
@@ -76,7 +76,7 @@ const Testimonials = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-accent-100 to-success-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+          className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-purple-200 to-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         />
       </div>
 
@@ -92,15 +92,15 @@ const Testimonials = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 rounded-full text-sm font-medium mb-6"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full text-sm font-bold mb-6 shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <Award className="w-4 h-4 mr-2" />
-            Client Success Stories
+            <Award className="w-5 h-5 mr-2 animate-pulse" />
+            🌟 Client Success Stories
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
             What Our Clients{' '}
-            <span className="gradient-text">Say About Us</span>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Say About Us</span>
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
