@@ -190,11 +190,6 @@ const Hero = () => {
               className="flex flex-wrap items-center gap-8 text-sm text-gray-500"
             >
               <div className="flex items-center">
-                <div className="flex -space-x-2 mr-3">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-white/50 backdrop-blur-sm rounded-full border-2 border-white"></div>
-                  ))}
-                </div>
                 <span>50+ Happy Clients</span>
               </div>
               <div className="flex items-center">

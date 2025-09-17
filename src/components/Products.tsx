@@ -2,10 +2,10 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { 
-  Zap, 
-  BarChart3, 
-  Users, 
+import {
+  Zap,
+  BarChart3,
+  Users,
   ArrowRight,
   Star,
   CheckCircle,
@@ -130,7 +130,7 @@ const Products = () => {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Supercharge your marketing efforts with our suite of innovative software products 
+            Supercharge your marketing efforts with our suite of innovative software products
             designed to automate, analyze, and optimize your digital marketing campaigns.
           </p>
         </motion.div>
@@ -142,8 +142,8 @@ const Products = () => {
               key={product.name}
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ 
-                duration: 0.6, 
+              transition={{
+                duration: 0.6,
                 delay: product.delay,
                 ease: [0.25, 0.1, 0.25, 1]
               }}
@@ -165,7 +165,7 @@ const Products = () => {
 
                 {/* Background Glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 {/* Content */}
                 <div className="relative z-10 h-full flex flex-col">
                   {/* Icon & Header */}
@@ -173,8 +173,8 @@ const Products = () => {
                     <motion.div
                       initial={{ scale: 0, rotate: -180 }}
                       animate={isInView ? { scale: 1, rotate: 0 } : {}}
-                      transition={{ 
-                        duration: 0.6, 
+                      transition={{
+                        duration: 0.6,
                         delay: product.delay + 0.2,
                         type: "spring",
                         stiffness: 200
@@ -204,9 +204,9 @@ const Products = () => {
                           key={feature}
                           initial={{ opacity: 0, x: -10 }}
                           animate={isInView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ 
-                            duration: 0.4, 
-                            delay: product.delay + 0.4 + featureIndex * 0.1 
+                          transition={{
+                            duration: 0.4,
+                            delay: product.delay + 0.4 + featureIndex * 0.1
                           }}
                           className="flex items-center text-sm text-gray-600"
                         >
@@ -249,7 +249,7 @@ const Products = () => {
                       Start Free Trial
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </motion.button>
-                    
+
                     <motion.button
                       initial={{ opacity: 0, y: 20 }}
                       animate={isInView ? { opacity: 1, y: 0 } : {}}

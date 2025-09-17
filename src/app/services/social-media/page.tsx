@@ -20,7 +20,9 @@ import {
   ThumbsUp,
   Instagram,
   Facebook,
-  Twitter
+  Twitter,
+  Send,
+  Music
 } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -44,6 +46,20 @@ export default function SocialMediaPage() {
       description: 'Create stunning visual content that captures attention and drives action.',
       color: 'from-pink-500 to-purple-600',
       features: ['Visual Content', 'Stories & Reels', 'Influencer Partnerships', 'Shopping Integration']
+    },
+    {
+      icon: Music,
+      name: 'TikTok',
+      description: 'Create viral short-form videos that reach millions of users worldwide.',
+      color: 'from-black to-pink-500',
+      features: ['Viral Video Content', 'Trend Participation', 'Influencer Collaborations', 'Creative Campaigns']
+    },
+    {
+      icon: Send,
+      name: 'Telegram',
+      description: 'Build engaged communities and broadcast channels for direct communication.',
+      color: 'from-blue-500 to-cyan-400',
+      features: ['Channel Management', 'Community Building', 'Broadcast Messages', 'Bot Integration']
     },
     {
       icon: Twitter,
@@ -120,7 +136,7 @@ export default function SocialMediaPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-pink-50 via-white to-blue-50 relative overflow-hidden">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <motion.div
             animate={{
@@ -132,7 +148,7 @@ export default function SocialMediaPage() {
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-pink-200 to-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+            className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
           />
         </div>
 
@@ -147,7 +163,7 @@ export default function SocialMediaPage() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-pink-100 to-blue-100 text-pink-700 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 rounded-full text-sm font-medium mb-6"
             >
               <Share2 className="w-4 h-4 mr-2" />
               Social Media Excellence
@@ -155,7 +171,7 @@ export default function SocialMediaPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-gray-900 leading-tight mb-6">
               Build Your Community with{' '}
-              <span className="bg-gradient-to-r from-pink-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Social Media Marketing
               </span>
             </h1>
@@ -173,7 +189,7 @@ export default function SocialMediaPage() {
                 <Link
                   href="/contact"
                   className="inline-flex items-center text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-                  style={{ background: `linear-gradient(135deg, #ec4899, #3b82f6)` }}
+                  style={{ background: `linear-gradient(135deg, #3b82f6, #06b6d4)` }}
                 >
                   Start Your Campaign
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -198,11 +214,11 @@ export default function SocialMediaPage() {
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-16 h-16 bg-gradient-to-r from-pink-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300"
+                  className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300"
                 >
                   <benefit.icon className="w-8 h-8 text-white" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-pink-600 mb-2">{benefit.stat}</h3>
+                <h3 className="text-2xl font-bold text-blue-600 mb-2">{benefit.stat}</h3>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h4>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
@@ -212,7 +228,7 @@ export default function SocialMediaPage() {
       </section>
 
       {/* Platforms Section */}
-      <section ref={ref} className="py-20 bg-gradient-to-br from-gray-50 to-pink-50">
+      <section ref={ref} className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -222,7 +238,7 @@ export default function SocialMediaPage() {
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
               We Master Every{' '}
-              <span className="bg-gradient-to-r from-pink-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Social Platform
               </span>
             </h2>
@@ -231,7 +247,7 @@ export default function SocialMediaPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {platforms.map((platform, index) => (
               <motion.div
                 key={platform.name}
@@ -272,7 +288,7 @@ export default function SocialMediaPage() {
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 mb-6">
               Our Social Media{' '}
-              <span className="bg-gradient-to-r from-pink-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Services
               </span>
             </h2>
@@ -288,9 +304,9 @@ export default function SocialMediaPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-pink-50 rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
 
@@ -312,7 +328,7 @@ export default function SocialMediaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-blue-600 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
           <div className="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-20 translate-y-20"></div>
@@ -338,7 +354,7 @@ export default function SocialMediaPage() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Start Your Social Campaign
                   <ArrowRight className="ml-2 w-5 h-5" />
