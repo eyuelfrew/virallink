@@ -1,13 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  Users, 
-  Award, 
-  Coffee, 
+import {
+  Briefcase,
+  MapPin,
+  Clock,
+  Users,
+  Award,
+  Coffee,
   Globe
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -16,7 +16,7 @@ import Footer from '@/components/Footer';
 
 export default function CareersPage() {
   const router = useRouter();
-  
+
   // Sample career data - in a real app, this would come from a CMS or API
   const careerStats = [
     {
@@ -67,7 +67,7 @@ export default function CareersPage() {
   return (
     <>
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
         {/* Animated Background */}
@@ -123,7 +123,7 @@ export default function CareersPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              We&#39;re always looking for passionate individuals to join our growing team. 
+              We&#39;re always looking for passionate individuals to join our growing team.
               Check out our current openings and see if there&#39;s a fit for you.
             </p>
           </motion.div>
@@ -183,8 +183,8 @@ export default function CareersPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
               >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" 
-                     style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"
+                  style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}>
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -224,7 +224,7 @@ export default function CareersPage() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">No Positions Currently Available</h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              We don&#39;t have any open positions at the moment, but we&#39;re always interested in hearing 
+              We don&#39;t have any open positions at the moment, but we&#39;re always interested in hearing
               from talented professionals. Please check back later for future opportunities.
             </p>
           </motion.div>
@@ -238,7 +238,7 @@ export default function CareersPage() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

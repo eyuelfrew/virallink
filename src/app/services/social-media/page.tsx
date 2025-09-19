@@ -6,18 +6,11 @@ import {
   Share2,
   Users,
   Heart,
-  MessageSquare,
   TrendingUp,
   Target,
   Camera,
-  Video,
   CheckCircle,
   ArrowRight,
-  Sparkles,
-  Award,
-  Clock,
-  Eye,
-  ThumbsUp,
   Instagram,
   Facebook,
   Twitter,
@@ -27,6 +20,7 @@ import {
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
 
 export default function SocialMediaPage() {
   const ref = useRef(null);
@@ -134,6 +128,7 @@ export default function SocialMediaPage() {
   return (
     <>
       <Header />
+      <StructuredData type="service" title="Social Media Marketing Services" description="Expert social media marketing services across Facebook, Instagram, TikTok, LinkedIn and other platforms" />
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
@@ -218,8 +213,8 @@ export default function SocialMediaPage() {
                 >
                   <benefit.icon className="w-8 h-8 text-white" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-blue-600 mb-2">{benefit.stat}</h3>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h4>
+                <div className="text-2xl font-bold text-blue-600 mb-2">{benefit.stat}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
@@ -345,7 +340,7 @@ export default function SocialMediaPage() {
               Ready to Go Viral?
             </h2>
             <p className="text-lg opacity-90 mb-8 max-w-3xl mx-auto">
-              Let's create social media campaigns that get people talking about your brand.
+              Let&apos;s create social media campaigns that get people talking about your brand.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.div

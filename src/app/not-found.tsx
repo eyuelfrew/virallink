@@ -140,7 +140,7 @@ export default function NotFound() {
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}>
                     <Mail className="w-6 h-6 text-white" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Email Support</h4>
+                  <h3 className="font-semibold text-gray-900 mb-2">Email Support</h3>
                   <p className="text-gray-600 text-sm mb-3">Get help from our team</p>
                   <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
                     Contact Us →
@@ -151,7 +151,7 @@ export default function NotFound() {
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}>
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Call Us</h4>
+                  <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
                   <p className="text-gray-600 text-sm mb-3">Speak with our experts</p>
                   <a href="tel:+251911234567" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
                     +251 91 123 4567 →

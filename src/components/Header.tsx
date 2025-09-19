@@ -167,7 +167,7 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-xl text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-colors"
-              aria-label="Toggle menu"
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               <AnimatePresence mode="wait">
                 {isMenuOpen ? (

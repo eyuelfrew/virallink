@@ -14,18 +14,14 @@ import {
   Users,
   CheckCircle,
   ArrowRight,
-  Sparkles,
-  Award,
-  Clock,
-  Eye,
-  Heart,
   Share2,
   Lightbulb,
-  Palette
+  Award
 } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
 
 export default function ContentMarketingPage() {
   const ref = useRef(null);
@@ -138,6 +134,7 @@ export default function ContentMarketingPage() {
   return (
     <>
       <Header />
+      <StructuredData type="service" title="Content Marketing Services" description="Professional content marketing services including blog writing, video content, copywriting, and multimedia content creation" />
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-purple-50 via-white to-blue-50 relative overflow-hidden">
@@ -222,8 +219,8 @@ export default function ContentMarketingPage() {
                 >
                   <benefit.icon className="w-8 h-8 text-white" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-purple-600 mb-2">{benefit.stat}</h3>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h4>
+                <div className="text-2xl font-bold text-purple-600 mb-2">{benefit.stat}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
@@ -349,7 +346,7 @@ export default function ContentMarketingPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We create industry-specific content that speaks to your audience's unique needs and challenges.
+              We create industry-specific content that speaks to your audience&apos;s unique needs and challenges.
             </p>
           </motion.div>
 
@@ -387,7 +384,7 @@ export default function ContentMarketingPage() {
               Ready to Tell Your Story?
             </h2>
             <p className="text-lg opacity-90 mb-8 max-w-3xl mx-auto">
-              Let's create content that engages your audience and drives business growth.
+              Let&apos;s create content that engages your audience and drives business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.div

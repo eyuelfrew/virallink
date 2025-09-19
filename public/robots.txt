@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow private and admin areas
+Disallow: /private/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://virallinkdigital.com/sitemap.xml

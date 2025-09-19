@@ -13,18 +13,12 @@ import {
   Clock,
   CheckCircle,
   ArrowRight,
-  Sparkles,
-  Award,
-  Zap,
-  PieChart,
-  LineChart,
-  Activity,
-  Filter,
-  Calendar
+  PieChart
 } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
 
 export default function AnalyticsPage() {
   const ref = useRef(null);
@@ -126,6 +120,7 @@ export default function AnalyticsPage() {
   return (
     <>
       <Header />
+      <StructuredData type="service" title="Web Analytics & Reporting Services" description="Professional web analytics and reporting services including Google Analytics setup, custom dashboards, and performance tracking" />
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-indigo-50 via-white to-blue-50 relative overflow-hidden">
@@ -210,8 +205,8 @@ export default function AnalyticsPage() {
                 >
                   <benefit.icon className="w-8 h-8 text-white" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-indigo-600 mb-2">{benefit.stat}</h3>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h4>
+                <div className="text-2xl font-bold text-indigo-600 mb-2">{benefit.stat}</div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
@@ -327,7 +322,7 @@ export default function AnalyticsPage() {
               Ready to Unlock Your Data?
             </h2>
             <p className="text-lg opacity-90 mb-8 max-w-3xl mx-auto">
-              Let's set up comprehensive analytics that give you the insights you need to grow your business.
+              Let&apos;s set up comprehensive analytics that give you the insights you need to grow your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.div

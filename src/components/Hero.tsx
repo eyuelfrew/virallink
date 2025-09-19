@@ -174,6 +174,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="group border-2 border-blue-200 text-blue-700 px-8 py-4 rounded-xl font-semibold flex items-center justify-center transition-all duration-300 hover:border-blue-300 backdrop-blur-sm"
+                aria-label="Start your digital transformation journey with Viralink"
               >
                 <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                 Start Your Journey
@@ -222,7 +223,7 @@ const Hero = () => {
                   {/* Header */}
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-bold text-gray-900 text-lg">Growth Analytics</h3>
+                      <div className="font-bold text-gray-900 text-lg">Growth Analytics</div>
                       <p className="text-sm text-gray-500">Real-time insights</p>
                     </div>
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center">

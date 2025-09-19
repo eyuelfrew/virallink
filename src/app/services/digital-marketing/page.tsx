@@ -7,22 +7,16 @@ import {
   TrendingUp,
   Users,
   Globe,
-  BarChart3,
-  Zap,
   CheckCircle,
   ArrowRight,
-  Sparkles,
   Award,
   Clock,
-  Shield,
-  Lightbulb,
-  Megaphone,
-  Eye,
-  MousePointer
+  Megaphone
 } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
 
 export default function DigitalMarketingPage() {
   const ref = useRef(null);
@@ -88,9 +82,10 @@ export default function DigitalMarketingPage() {
   return (
     <>
       <Header />
+      <StructuredData type="service" title="Digital Marketing Services" description="Comprehensive digital marketing services including SEO, social media marketing, content creation, and performance analytics" />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50  to-purple-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <motion.div
             animate={{
@@ -131,7 +126,7 @@ export default function DigitalMarketingPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              Comprehensive digital marketing strategies that drive growth, increase brand awareness, 
+              Comprehensive digital marketing strategies that drive growth, increase brand awareness,
               and deliver measurable results for your business.
             </p>
 
@@ -252,7 +247,7 @@ export default function DigitalMarketingPage() {
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                
+
                 <div className="grid grid-cols-2 gap-3">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -279,13 +274,14 @@ export default function DigitalMarketingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-center text-white"
+            className="text-center  "
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
-              Ready to Accelerate Your Growth?
+              Ready to Accelerate Your{' '}
+              <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Growth?</span>
             </h2>
             <p className="text-lg opacity-90 mb-8 max-w-3xl mx-auto">
-              Let's create a digital marketing strategy that drives real results for your business.
+              Let&apos;s create a digital marketing strategy that drives real results for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.div

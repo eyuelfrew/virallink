@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
 
 export default function ContactPage() {
   const ref = useRef(null);
@@ -124,6 +125,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
+      <StructuredData type="webpage" title="Contact Viralink Digital Marketing Agency" description="Contact our digital marketing experts in Addis Ababa, Ethiopia for SEO, social media, and web development services" />
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
@@ -412,6 +414,7 @@ export default function ContactPage() {
                       whileTap={{ scale: 0.98 }}
                       className="w-full text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}
+                      aria-label={isSubmitting ? "Sending your message" : "Send contact form message"}
                     >
                       {isSubmitting ? (
                         <>
@@ -468,6 +471,7 @@ export default function ContactPage() {
                         });
                       }}
                       className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold"
+                      aria-label="Send another message using the contact form"
                     >
                       Send Another Message
                     </motion.button>

@@ -167,6 +167,7 @@ const CTA = () => {
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.95 }}
                             className="group btn-hover bg-white text-black px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center"
+                            aria-label="Get started with Viralink digital marketing services"
                         >
                             Get Started Now
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -176,6 +177,7 @@ const CTA = () => {
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.95 }}
                             className="group glass border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-white/50 hover:bg-white/10"
+                            aria-label="Schedule a consultation with Viralink team"
                         >
                             Schedule Consultation
                         </motion.button>

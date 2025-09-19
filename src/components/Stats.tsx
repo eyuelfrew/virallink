@@ -282,6 +282,7 @@ const Stats = () => {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="btn-hover bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            aria-label="Begin your growth journey with Viralink digital marketing services"
           >
             Start Your Growth Journey
           </motion.button>

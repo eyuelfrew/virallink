@@ -265,6 +265,7 @@ export default function AboutPage() {
                 whileTap={{ scale: 0.95 }}
                 className="text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center cursor-pointer"
                 style={{ background: `linear-gradient(135deg, #218bed, #1e7fd4)` }}
+                aria-label="Watch our company story and journey"
               >
                 <Play className="mr-2 w-5 h-5" />
                 Watch Our Story
@@ -274,6 +275,7 @@ export default function AboutPage() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-blue-200 hover:border-blue-300 cursor-pointer"
+                aria-label="Meet our Ethiopian team members"
               >
                 Meet Our Team
               </motion.button>
@@ -668,6 +670,7 @@ export default function AboutPage() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
                 onClick={() => router.push('/careers')}
+                aria-label="View open career positions at Viralink"
               >
                 View Open Positions
                 <ArrowRight className="ml-2 w-5 h-5" />

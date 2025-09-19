@@ -237,6 +237,7 @@ const Services = () => {
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     className="group/btn w-full bg-gradient-to-r from-gray-100 to-gray-200 hover:from-primary-500 hover:to-accent-500 text-gray-700 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
+                    aria-label={`Learn more about ${service.title} services`}
                   >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -276,16 +277,16 @@ const Services = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="text-2xl lg:text-4xl font-heading font-bold mb-4"
+                className="text-2xl lg:text-4xl font-heading font-bold mb-4 text-white"
               >
                 Ready to Accelerate Your{' '}
-                <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Growth?</span>
+                <span className="bg-gradient-to-r from-yellow-300 to-yellow-100 bg-clip-text text-transparent">Growth?</span>
               </motion.h3>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="text-lg opacity-90 mb-8 max-w-2xl mx-auto"
+                className="text-lg text-white mb-8 max-w-2xl mx-auto"
               >
                 Let&#39;s discuss how our comprehensive digital marketing services can transform
                 your business and drive unprecedented growth.
@@ -297,6 +298,7 @@ const Services = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-hover bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                aria-label="Start your project today with Viralink"
               >
                 Start Your Project Today
               </motion.button>

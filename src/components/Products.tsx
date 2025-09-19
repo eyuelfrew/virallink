@@ -197,7 +197,7 @@ const Products = () => {
 
                   {/* Features */}
                   <div className="mb-8 flex-grow">
-                    <h4 className="font-semibold text-gray-900 mb-4">Key Features:</h4>
+                    <div className="font-semibold text-gray-900 mb-4">Key Features:</div>
                     <ul className="space-y-3">
                       {product.features.map((feature, featureIndex) => (
                         <motion.li
@@ -219,7 +219,7 @@ const Products = () => {
 
                   {/* Pricing */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Pricing:</h4>
+                    <div className="font-semibold text-gray-900 mb-3">Pricing:</div>
                     <div className="space-y-2">
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-600">Starter</span>

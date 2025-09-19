@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import {
   Search,
   Share2,
@@ -9,38 +9,34 @@ import {
   Target,
   BarChart3,
   Zap,
-  Globe,
   Users,
   TrendingUp,
   Award,
   CheckCircle,
   ArrowRight,
   Play,
-  Sparkles,
   Code,
   Smartphone,
   Mail,
-  MessageSquare,
-  Eye,
-  MousePointer,
-  ShoppingCart,
-  Megaphone,
-  Camera,
   Video,
-  Palette,
   Lightbulb,
   Shield,
   Clock,
-  Star
+  Star,
+  Palette,
+  Sparkles,
+
 } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import StructuredData from '@/components/StructuredData';
 
 export default function ServicesPage() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
-  const [activeService, setActiveService] = useState(0);
+
 
   const mainServices = [
     {
@@ -191,6 +187,8 @@ export default function ServicesPage() {
   return (
     <>
       <Header />
+      <Breadcrumbs />
+      <StructuredData type="service" title="Digital Marketing Services" description="Comprehensive digital marketing services including SEO, social media marketing, and web development" />
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
@@ -247,7 +245,7 @@ export default function ServicesPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-              From SEO and social media to custom development and automation, we provide 
+              From SEO and social media to custom development and automation, we provide
               comprehensive digital marketing solutions that drive real results for your business.
             </p>
 
@@ -265,11 +263,12 @@ export default function ServicesPage() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </motion.div>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-blue-200 hover:border-blue-300"
+                aria-label="View our portfolio and previous work"
               >
                 <Play className="mr-2 w-5 h-5" />
                 View Our Work
@@ -322,20 +321,20 @@ export default function ServicesPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive digital marketing solutions designed to accelerate your business growth 
+              Comprehensive digital marketing solutions designed to accelerate your business growth
               and maximize your online presence.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {mainServices.map((service, index) => (
+            {mainServices.map((service) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: service.delay }}
                 className="group bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 relative overflow-hidden"
-                onMouseEnter={() => setActiveService(index)}
+
               >
                 {/* Background Gradient */}
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.bgColor} opacity-0 group-hover:opacity-100 rounded-full transform translate-x-16 -translate-y-16 transition-opacity duration-300`}></div>
@@ -410,7 +409,7 @@ export default function ServicesPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We follow a systematic approach to ensure every project delivers exceptional results 
+              We follow a systematic approach to ensure every project delivers exceptional results
               and exceeds your expectations.
             </p>
           </motion.div>
@@ -467,7 +466,7 @@ export default function ServicesPage() {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Expand your digital capabilities with our specialized services designed to complement 
+              Expand your digital capabilities with our specialized services designed to complement
               your core marketing strategy.
             </p>
           </motion.div>
@@ -522,7 +521,7 @@ export default function ServicesPage() {
               Ready to Transform Your Digital Presence?
             </h2>
             <p className="text-lg opacity-90 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our comprehensive digital services can accelerate your business growth 
+              Let&apos;s discuss how our comprehensive digital services can accelerate your business growth
               and help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -538,7 +537,7 @@ export default function ServicesPage() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </motion.div>
-              
+
               <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}

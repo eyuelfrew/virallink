@@ -103,7 +103,7 @@ const Testimonials = () => {
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Say About Us</span>
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed font-medium">
             Don&#39;t just take our word for it. Here&#39;s what industry leaders and successful 
             businesses have to say about their experience working with Viralink.
           </p>
@@ -155,7 +155,7 @@ const Testimonials = () => {
                             <Star className="w-5 h-5 text-warning-400 fill-current" />
                           </motion.div>
                         ))}
-                        <span className="ml-2 text-sm text-gray-500 font-medium">5.0</span>
+                        <span className="ml-2 text-sm text-gray-800 font-bold">5.0</span>
                       </motion.div>
 
                       {/* Testimonial Text */}
@@ -163,7 +163,7 @@ const Testimonials = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 font-medium"
+                        className="text-lg lg:text-xl text-gray-900 leading-relaxed mb-8 font-medium"
                       >
                         &#34;{testimonial.text}&#34;
                       </motion.blockquote>
@@ -190,8 +190,8 @@ const Testimonials = () => {
                           {testimonial.name.split(' ').map(n => n[0]).join('')}
                         </div>
                         <div>
-                          <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
-                          <p className="text-gray-600">{testimonial.position} at {testimonial.company}</p>
+                          <h3 className="font-bold text-gray-900 text-lg">{testimonial.name}</h3>
+                          <p className="text-gray-800 font-medium">{testimonial.position} at {testimonial.company}</p>
                         </div>
                       </motion.div>
                     </div>
@@ -208,6 +208,7 @@ const Testimonials = () => {
               whileTap={{ scale: 0.9 }}
               onClick={prevTestimonial}
               className="p-3 bg-white rounded-full shadow-lg border border-gray-200 hover:border-primary-300 transition-colors duration-200"
+              aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-6 h-6 text-gray-600" />
             </motion.button>
@@ -225,6 +226,7 @@ const Testimonials = () => {
                       ? 'bg-gradient-to-r from-primary-500 to-accent-500 w-8' 
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
             </div>
@@ -234,6 +236,7 @@ const Testimonials = () => {
               whileTap={{ scale: 0.9 }}
               onClick={nextTestimonial}
               className="p-3 bg-white rounded-full shadow-lg border border-gray-200 hover:border-primary-300 transition-colors duration-200"
+              aria-label="Next testimonial"
             >
               <ChevronRight className="w-6 h-6 text-gray-600" />
             </motion.button>
@@ -247,15 +250,15 @@ const Testimonials = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-500 mb-8">Trusted by industry leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <p className="text-gray-800 mb-8 font-semibold">Trusted by industry leaders</p>
+          <div className="flex flex-wrap justify-center items-center gap-8">
             {['Fitsum Printing and Advertising', 'Soul Medicare Solution', 'Admas Tour and Travel'].map((company, index) => (
               <motion.div
                 key={company}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
-                className="text-xl font-bold text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                className="text-xl font-bold text-gray-700 hover:text-gray-900 transition-colors duration-200"
               >
                 {company}
               </motion.div>
