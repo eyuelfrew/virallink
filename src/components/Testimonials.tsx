@@ -18,7 +18,7 @@ const Testimonials = () => {
       rating: 5,
       text: 'Partnering with Virallink Digital Marketing was one of the best decisions we\'ve made. We\'ve been in the printing and advertising business for years, but we struggled to translate our quality work into a strong online presence. Virallink understood our unique challenges and crafted a strategy that truly showcased our products. Our engagement has skyrocketed, and we\'re getting more qualified leads than ever before. Their team is professional, creative, and genuinely committed to our success.',
       results: 'Transformed Online Presence',
-      color: 'from-primary-500 to-primary-600'
+      color: 'from-blue-500 to-blue-600'
     },
     {
       name: 'Solomon Nigussie',
@@ -28,7 +28,7 @@ const Testimonials = () => {
       rating: 5,
       text: 'As a Medicare solution company, our biggest goal is to build trust and provide clarity in a complex industry. The team at Virallink Digital Marketing helped us achieve just that. They created a content strategy that was not only informative but also compassionate and easy for our clients to understand. Their work has elevated our brand\'s reputation and helped us reach a wider audience of people looking for reliable Medicare advice. We\'re grateful for their expertise and dedication to our mission and delivering in such a short time.',
       results: 'Enhanced Brand Trust',
-      color: 'from-success-500 to-success-600'
+      color: 'from-green-500 to-green-600'
     },
     {
       name: 'Addisalem Mekonnen',
@@ -38,7 +38,7 @@ const Testimonials = () => {
       rating: 5,
       text: 'We\'ve always been passionate about creating unforgettable travel experiences, and Virallink Digital Marketing helped us share that passion with our people and the world. They captured the essence of our tours and translated it into stunning social media content that inspired our followers to book their next adventure. Our bookings have seen a significant increase, and we\'ve been able to connect with travelers from all over. We highly recommend Virallink to any business looking to bring their story to life online.',
       results: '+Significant Booking Increase',
-      color: 'from-accent-500 to-accent-600'
+      color: 'from-purple-500 to-purple-600'
     }
   ];
 
@@ -134,7 +134,7 @@ const Testimonials = () => {
                       transition={{ duration: 0.6, delay: 0.4, type: "spring" }}
                       className="absolute top-8 right-8"
                     >
-                      <Quote className="w-12 h-12 text-primary-200" />
+                      <Quote className="w-12 h-12 text-blue-200" />
                     </motion.div>
 
                     <div className="relative z-10">
@@ -152,7 +152,7 @@ const Testimonials = () => {
                             animate={isInView ? { opacity: 1, scale: 1 } : {}}
                             transition={{ duration: 0.3, delay: 0.5 + i * 0.1 }}
                           >
-                            <Star className="w-5 h-5 text-warning-400 fill-current" />
+                            <Star className="w-5 h-5 text-yellow-400 fill-current" />
                           </motion.div>
                         ))}
                         <span className="ml-2 text-sm text-gray-800 font-bold">5.0</span>
@@ -186,7 +186,7 @@ const Testimonials = () => {
                         transition={{ duration: 0.6, delay: 0.7 }}
                         className="flex items-center"
                       >
-                        <div className="w-16 h-16 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 shadow-lg">
+                        <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 shadow-lg">
                           {testimonial.name.split(' ').map(n => n[0]).join('')}
                         </div>
                         <div>
@@ -207,7 +207,7 @@ const Testimonials = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={prevTestimonial}
-              className="p-3 bg-white rounded-full shadow-lg border border-gray-200 hover:border-primary-300 transition-colors duration-200"
+              className="p-3 bg-white rounded-full shadow-lg border border-gray-200 hover:border-blue-300 transition-colors duration-200"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-6 h-6 text-gray-600" />
@@ -223,7 +223,7 @@ const Testimonials = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-200 ${
                     index === currentIndex 
-                      ? 'bg-gradient-to-r from-primary-500 to-accent-500 w-8' 
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 w-8' 
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
@@ -235,7 +235,7 @@ const Testimonials = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={nextTestimonial}
-              className="p-3 bg-white rounded-full shadow-lg border border-gray-200 hover:border-primary-300 transition-colors duration-200"
+              className="p-3 bg-white rounded-full shadow-lg border border-gray-200 hover:border-blue-300 transition-colors duration-200"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-6 h-6 text-gray-600" />

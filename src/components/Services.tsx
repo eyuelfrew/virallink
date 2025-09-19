@@ -113,7 +113,7 @@ const Services = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-primary-100 to-accent-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+          className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         />
         <motion.div
           animate={{
@@ -125,7 +125,7 @@ const Services = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-accent-100 to-success-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-purple-100 to-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         />
       </div>
 
@@ -141,7 +141,7 @@ const Services = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 rounded-full text-sm font-medium mb-6"
+            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 rounded-full text-sm font-medium mb-6"
           >
             <Globe className="w-4 h-4 mr-2" />
             Our Expertise
@@ -193,7 +193,7 @@ const Services = () => {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-heading font-bold text-gray-900 mb-4 group-hover:text-primary-700 transition-colors duration-300">
+                  <h3 className="text-xl font-heading font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">
                     {service.title}
                   </h3>
 
@@ -222,7 +222,7 @@ const Services = () => {
                             duration: 0.3,
                             delay: service.delay + 0.5 + featureIndex * 0.1
                           }}
-                          className="w-2 h-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mr-3 flex-shrink-0"
+                          className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3 flex-shrink-0"
                         ></motion.div>
                         {feature}
                       </motion.li>
@@ -236,7 +236,7 @@ const Services = () => {
                     transition={{ duration: 0.4, delay: service.delay + 0.8 }}
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group/btn w-full bg-gradient-to-r from-gray-100 to-gray-200 hover:from-primary-500 hover:to-accent-500 text-gray-700 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
+                    className="group/btn w-full bg-gradient-to-r from-gray-100 to-gray-200 hover:from-blue-500 hover:to-purple-500 text-gray-700 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center"
                     aria-label={`Learn more about ${service.title} services`}
                   >
                     Learn More
@@ -245,11 +245,11 @@ const Services = () => {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-primary-100 to-accent-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-accent-100 to-success-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-purple-100 to-green-100 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
 
                 {/* Hover Glow Effect */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary-500 to-accent-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-xl"></div>
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 blur-xl"></div>
               </div>
             </motion.div>
           ))}
@@ -262,7 +262,7 @@ const Services = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
