@@ -11,7 +11,8 @@ import {
   Linkedin, 
   Instagram,
   ArrowRight,
-  Heart
+  Heart,
+  Music
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -52,10 +53,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com/viralink', name: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com/viralink', name: 'Twitter' },
+    { icon: Facebook, href: 'https://web.facebook.com/profile.php?id=61579361290113', name: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/virallink_digital_marketing/', name: 'Instagram' },
+    { icon: Music, href: 'https://www.tiktok.com/@virallinkdigitalmarketin', name: 'TikTok' },
     { icon: Linkedin, href: 'https://linkedin.com/company/viralink', name: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/viralink', name: 'Instagram' },
   ];
 
   return (

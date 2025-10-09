@@ -54,9 +54,16 @@ const Header = () => {
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200' 
-          : 'bg-transparent'
+          ? 'bg-white/85 backdrop-blur-xl shadow-lg border-b border-white/20' 
+          : 'bg-white/70 backdrop-blur-lg shadow-md'
       }`}
+      style={{
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        background: isScrolled 
+          ? 'rgba(255, 255, 255, 0.85)' 
+          : 'rgba(255, 255, 255, 0.7)'
+      }}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
@@ -121,7 +128,12 @@ const Header = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
+                      className="absolute top-full left-0 mt-2 w-56 bg-white/85 backdrop-blur-xl rounded-xl shadow-xl border border-white/20 py-2 z-50"
+                      style={{
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                        background: 'rgba(255, 255, 255, 0.85)'
+                      }}
                     >
                       {item.dropdown.map((dropdownItem, dropdownIndex) => (
                         <motion.div
@@ -204,7 +216,12 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-              className="lg:hidden overflow-hidden bg-white rounded-2xl shadow-xl border border-gray-100 mt-4"
+              className="lg:hidden overflow-hidden bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 mt-4"
+              style={{
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                background: 'rgba(255, 255, 255, 0.8)'
+              }}
             >
               <div className="py-4 space-y-2">
                 {navItems.map((item, index) => (

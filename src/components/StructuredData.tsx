@@ -74,10 +74,10 @@ const StructuredData = ({ type = 'organization', title, description }: Structure
             "addressCountry": "Ethiopia"
           },
           "sameAs": [
-            "https://www.facebook.com/viralink",
-            "https://www.twitter.com/viralink",
-            "https://www.linkedin.com/company/viralink",
-            "https://www.instagram.com/viralink"
+            "https://web.facebook.com/profile.php?id=61579361290113",
+            "https://www.instagram.com/virallink_digital_marketing/",
+            "https://www.tiktok.com/@virallinkdigitalmarketin",
+            "https://www.linkedin.com/company/viralink"
           ],
           "aggregateRating": {
             "@type": "AggregateRating",

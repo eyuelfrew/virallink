@@ -14,7 +14,11 @@ import {
   ArrowRight,
   Globe,
   Users,
-  Award
+  Award,
+  Facebook,
+  Instagram,
+  Music,
+  Linkedin
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -50,11 +54,25 @@ export default function ContactPage() {
     setSubmitError('');
 
     try {
-      // Prepare template parameters
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
       setIsSubmitted(true);
+      console.log('Message sent successfully:', result.message);
     } catch (error) {
-      console.error('Email sending failed:', error);
-      setSubmitError('Failed to send message. Please try again or contact us directly.');
+      console.error('Form submission failed:', error);
+      setSubmitError(error instanceof Error ? error.message : 'Failed to send message. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -245,6 +263,73 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
+
+        {/* Social Media Section */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h3 className="text-2xl font-heading font-bold text-gray-900 mb-4">
+              Follow Us on Social Media
+            </h3>
+            <p className="text-gray-600 mb-8">
+              Stay connected and get the latest updates on digital marketing trends and tips
+            </p>
+            
+            <div className="flex justify-center items-center space-x-6">
+              <motion.a
+                href="https://web.facebook.com/profile.php?id=61579361290113"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="w-8 h-8 text-white" />
+              </motion.a>
+
+              <motion.a
+                href="https://www.instagram.com/virallink_digital_marketing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-8 h-8 text-white" />
+              </motion.a>
+
+              <motion.a
+                href="https://www.tiktok.com/@virallinkdigitalmarketin"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-16 h-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+                aria-label="Follow us on TikTok"
+              >
+                <Music className="w-8 h-8 text-white" />
+              </motion.a>
+
+              <motion.a
+                href="https://linkedin.com/company/viralink"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin className="w-8 h-8 text-white" />
+              </motion.a>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Contact Form & Map Section */}
@@ -284,7 +369,7 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
                           placeholder="John Doe"
                         />
                       </div>
@@ -298,7 +383,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
                           placeholder="john@company.com"
                         />
                       </div>
@@ -314,7 +399,7 @@ export default function ContactPage() {
                           name="company"
                           value={formData.company}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
                           placeholder="Your Company"
                         />
                       </div>
@@ -327,7 +412,7 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white placeholder-gray-500"
                           placeholder="+1 (555) 123-4567"
                         />
                       </div>
@@ -342,7 +427,7 @@ export default function ContactPage() {
                         value={formData.service}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                       >
                         <option value="">Select a service</option>
                         {services.map((service) => (
@@ -362,7 +447,7 @@ export default function ContactPage() {
                           name="budget"
                           value={formData.budget}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                         >
                           <option value="">Select budget range</option>
                           {budgetRanges.map((budget) => (
@@ -380,7 +465,7 @@ export default function ContactPage() {
                           name="timeline"
                           value={formData.timeline}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                         >
                           <option value="">Select timeline</option>
                           {timelines.map((timeline) => (
@@ -402,7 +487,7 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none text-gray-900 bg-white placeholder-gray-500"
                         placeholder="Tell us about your project, goals, and how we can help you..."
                       />
                     </div>
