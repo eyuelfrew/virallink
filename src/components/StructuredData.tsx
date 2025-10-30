@@ -151,18 +151,12 @@ const StructuredData = ({ type = 'organization', title, description }: Structure
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Products",
-              "item": "https://virallinkdigital.com/products"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
               "name": "About",
               "item": "https://virallinkdigital.com/about"
             },
             {
               "@type": "ListItem",
-              "position": 5,
+              "position": 4,
               "name": "Contact",
               "item": "https://virallinkdigital.com/contact"
             }

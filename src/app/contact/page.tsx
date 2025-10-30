@@ -54,22 +54,73 @@ export default function ContactPage() {
     setSubmitError('');
 
     try {
-      const response = await fetch('/api/contact', {
+      // Get bot token and chat ID from environment variables
+      const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
+      const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+
+      if (!botToken || !chatId) {
+        throw new Error('Telegram bot not configured properly. Please contact us directly.');
+      }
+
+      // Format the message like in the TelegramBot class
+      const timestamp = new Date().toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZoneName: 'short'
+      });
+
+      let message = `🔔 *New Contact Form Submission*\n\n`;
+      message += `👤 *Name:* ${formData.name}\n`;
+      message += `📧 *Email:* ${formData.email}\n`;
+      
+      if (formData.company) {
+        message += `🏢 *Company:* ${formData.company}\n`;
+      }
+      
+      if (formData.phone) {
+        message += `📱 *Phone:* ${formData.phone}\n`;
+      }
+      
+      message += `🎯 *Service:* ${formData.service}\n`;
+      
+      if (formData.budget) {
+        message += `💰 *Budget:* ${formData.budget}\n`;
+      }
+      
+      if (formData.timeline) {
+        message += `⏰ *Timeline:* ${formData.timeline}\n`;
+      }
+      
+      message += `\n💬 *Message:*\n${formData.message}\n\n`;
+      message += `📅 *Submitted:* ${timestamp}`;
+
+      // Send the message to Telegram
+      const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+          parse_mode: 'Markdown',
+          disable_web_page_preview: true,
+        }),
       });
 
-      const result = await response.json();
-
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to send message');
+        const errorData = await response.json();
+        console.error('Telegram API error:', errorData);
+        throw new Error('Failed to send message to Telegram');
       }
 
+      const result = await response.json();
+      console.log('Message sent successfully:', result.message_id);
       setIsSubmitted(true);
-      console.log('Message sent successfully:', result.message);
     } catch (error) {
       console.error('Form submission failed:', error);
       setSubmitError(error instanceof Error ? error.message : 'Failed to send message. Please try again or contact us directly.');
@@ -228,7 +279,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {contactInfo.map((info) => (
               <motion.div
-                key={info.title}
+                key={`contact-${info.title}`}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: info.delay }}
@@ -430,8 +481,8 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                       >
                         <option value="">Select a service</option>
-                        {services.map((service) => (
-                          <option key={service} value={service}>
+                        {services.map((service, index) => (
+                          <option key={`service-${index}`} value={service}>
                             {service}
                           </option>
                         ))}
@@ -450,8 +501,8 @@ export default function ContactPage() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                         >
                           <option value="">Select budget range</option>
-                          {budgetRanges.map((budget) => (
-                            <option key={budget} value={budget}>
+                          {budgetRanges.map((budget, index) => (
+                            <option key={`budget-${index}`} value={budget}>
                               {budget}
                             </option>
                           ))}
@@ -468,8 +519,8 @@ export default function ContactPage() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 bg-white"
                         >
                           <option value="">Select timeline</option>
-                          {timelines.map((timeline) => (
-                            <option key={timeline} value={timeline}>
+                          {timelines.map((timeline, index) => (
+                            <option key={`timeline-${index}`} value={timeline}>
                               {timeline}
                             </option>
                           ))}

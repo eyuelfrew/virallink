@@ -7,7 +7,6 @@ import {
   Phone, 
   MapPin, 
   Facebook, 
-  Twitter, 
   Linkedin, 
   Instagram,
   ArrowRight,
@@ -31,22 +30,21 @@ const Footer = () => {
       ]
     },
     {
-      title: 'Products',
+      title: 'Services',
       links: [
-        { name: 'Web Development', href: '/products/web-development' },
-        { name: 'Custom Designed QR Stands', href: '/products/qr-stands' },
-        { name: 'ViraCRM - Customer Management', href: '/products/viracrm' },
-        { name: 'Custom Solutions', href: '/products/custom' },
+        { name: 'SEO Optimization', href: '/services/seo' },
+        { name: 'Social Media Marketing', href: '/services/social-media' },
+        { name: 'Content Creation', href: '/services/content' },
+        { name: 'Analytics & Reporting', href: '/services/analytics' },
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Case Studies', href: '/case-studies' },
         { name: 'Blog', href: '/blog' },
+        { name: 'Contact', href: '/contact' },
       ]
     },
 
@@ -133,19 +131,19 @@ const Footer = () => {
                 {/* Contact Info */}
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-300">
-                    <Mail className="w-5 h-5 mr-3 text-primary-400" />
+                    <Mail className="w-5 h-5 mr-3 text-blue-400" />
                     <span>info@virallinkdigital.com</span>
                   </div>
                   <div className="flex items-center text-gray-300">
-                    <Phone className="w-5 h-5 mr-3 text-primary-400" />
+                    <Phone className="w-5 h-5 mr-3 text-blue-400" />
                     <span>+251963343720</span>
                   </div>
                   <div className="flex items-center text-gray-300">
-                    <Phone className="w-5 h-5 mr-3 text-primary-400" />
+                    <Phone className="w-5 h-5 mr-3 text-blue-400" />
                     <span>+251935334875</span>
                   </div>
                   <div className="flex items-center text-gray-300">
-                    <MapPin className="w-5 h-5 mr-3 text-primary-400" />
+                    <MapPin className="w-5 h-5 mr-3 text-blue-400" />
                     <span>Mexico, Taos Tower 9th Floor (In front of Genet Hotel)</span>
                   </div>
                 </div>
@@ -177,7 +175,7 @@ const Footer = () => {
                         >
                           <Link
                             href={link.href}
-                            className="text-gray-400 hover:text-primary-400 transition-colors duration-200 text-sm flex items-center group"
+                            className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm flex items-center group"
                           >
                             {link.name}
                             <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
@@ -213,7 +211,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-r hover:from-primary-600 hover:to-accent-600 rounded-xl flex items-center justify-center transition-all duration-300 group shadow-lg"
+                  className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-xl flex items-center justify-center transition-all duration-300 group shadow-lg"
                   aria-label={social.name}
                 >
                   <social.icon className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
@@ -231,16 +229,12 @@ const Footer = () => {
             className="flex justify-center mb-6"
           >
             <div className="flex items-center space-x-8 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors duration-200 hover:underline">
-                Privacy Policy
+              <Link href="/contact" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 hover:underline">
+                Contact Us
               </Link>
               <span className="text-gray-600">•</span>
-              <Link href="/terms" className="text-gray-400 hover:text-primary-400 transition-colors duration-200 hover:underline">
-                Terms of Service
-              </Link>
-              <span className="text-gray-600">•</span>
-              <Link href="/cookies" className="text-gray-400 hover:text-primary-400 transition-colors duration-200 hover:underline">
-                Cookie Policy
+              <Link href="/services" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 hover:underline">
+                Our Services
               </Link>
             </div>
           </motion.div>

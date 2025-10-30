@@ -16,11 +16,12 @@ export class TelegramBot {
   private chatId: string;
 
   constructor() {
-    this.botToken = process.env.TELEGRAM_BOT_TOKEN || '';
-    this.chatId = process.env.TELEGRAM_CHAT_ID || '';
+    this.botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN || '';
+    this.chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID || '';
 
     if (!this.botToken || !this.chatId) {
-      throw new Error('Telegram bot token and chat ID must be provided in environment variables');
+      console.warn('Telegram bot token and chat ID must be provided in environment variables');
+      // Don't throw error to prevent build failures
     }
   }
 
@@ -71,6 +72,11 @@ export class TelegramBot {
    */
   async sendContactForm(data: ContactFormData): Promise<boolean> {
     try {
+      if (!this.botToken || !this.chatId) {
+        console.error('Telegram bot not configured properly');
+        return false;
+      }
+
       const message = this.formatMessage(data);
       const url = `https://api.telegram.org/bot${this.botToken}/sendMessage`;
 
@@ -126,5 +132,24 @@ export class TelegramBot {
   }
 }
 
-// Export a singleton instance
-export const telegramBot = new TelegramBot();
+// Export a singleton instance with error handling
+let telegramBot: TelegramBot;
+
+try {
+  telegramBot = new TelegramBot();
+} catch (error) {
+  console.warn('Telegram bot initialization failed:', error);
+  // Create a dummy bot for development
+  telegramBot = {
+    sendContactForm: async () => {
+      console.log('Telegram bot not configured - form data would be sent here');
+      return false;
+    },
+    testConnection: async () => {
+      console.log('Telegram bot not configured - connection test would be performed here');
+      return false;
+    }
+  } as unknown as TelegramBot;
+}
+
+export { telegramBot };
